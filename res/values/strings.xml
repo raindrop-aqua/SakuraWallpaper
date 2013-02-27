@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">SakuraLiveWallpaper</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="description">桜が舞い散るライブ壁紙です</string>
+
+</resources>
