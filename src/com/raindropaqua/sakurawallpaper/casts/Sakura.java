@@ -64,15 +64,15 @@ public class Sakura implements Base {
 
 	@Override
 	public boolean onStandby(GL10 gl) {
-        // polygon
+		// polygon
 		FloatBuffer fb = GLUtil.makeFloatBuffer(vertices);
-        gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
-        gl.glVertexPointer(3, GL10.GL_FLOAT, 0, fb);
-        // color
-        FloatBuffer colorBuff = GLUtil.makeFloatBuffer(colors);
-        gl.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuff);
-        gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
-        return true;
+		gl.glEnableClientState(GL10.GL_VERTEX_ARRAY);
+		gl.glVertexPointer(3, GL10.GL_FLOAT, 0, fb);
+		// color
+		FloatBuffer colorBuff = GLUtil.makeFloatBuffer(colors);
+		gl.glColorPointer(4, GL10.GL_FLOAT, 0, colorBuff);
+		gl.glEnableClientState(GL10.GL_COLOR_ARRAY);
+		return true;
 	}
 
 	@Override
@@ -80,7 +80,7 @@ public class Sakura implements Base {
 		angle += anglePlus;
 		posX += speedX;
 		posY -= speedY;
-		
+
 		if (posX >= 1.1f) {
 			posX = -1.1f;
 		}
@@ -92,14 +92,12 @@ public class Sakura implements Base {
 
 	@Override
 	public void onDraw(GL10 gl) {
-	    gl.glMatrixMode(GL10.GL_MODELVIEW);
-	    gl.glLoadIdentity();
-	    gl.glTranslatef(posX, posY, posZ);
-        gl.glRotatef(angle, rotX, rotY, rotZ);
-	    gl.glScalef(scaleX, scaleY, scaleZ);        
-        
-        gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4);
+		gl.glMatrixMode(GL10.GL_MODELVIEW);
+		gl.glLoadIdentity();
+		gl.glTranslatef(posX, posY, posZ);
+		gl.glRotatef(angle, rotX, rotY, rotZ);
+		gl.glScalef(scaleX, scaleY, scaleZ);
+
+		gl.glDrawArrays(GL10.GL_TRIANGLE_STRIP, 0, 4);
 	}
-
-
 }
