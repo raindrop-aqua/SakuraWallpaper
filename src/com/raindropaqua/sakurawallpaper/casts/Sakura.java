@@ -7,7 +7,7 @@ import javax.microedition.khronos.opengles.GL10;
 
 import com.raindropaqua.sakurawallpaper.engine.GLUtil;
 
-public class Rectangle implements Base {
+public class Sakura implements Base {
 
 	private float[] vertices ={
 			// x,y,z
@@ -17,11 +17,11 @@ public class Rectangle implements Base {
 			0.1f, 0.0f, 0.0f,
 	};
     private float[] colors = new float[] {     
-    		// r.g.b.a
-    		1.0f, 0.9f, 1.0f, 1.0f,
-		    1.0f, 1.0f, 1.0f, 0.3f,
-		    1.0f, 0.5f, 1.0f, 1.0f,
-		    1.0f, 1.0f, 1.0f, 0.3f,
+			// r.g.b.a
+			1.0f, 0.9f, 1.0f, 1.0f,
+			1.0f, 1.0f, 1.0f, 0.3f,
+			1.0f, 0.5f, 1.0f, 1.0f,
+			1.0f, 1.0f, 1.0f, 0.3f,
     };
     private final Random r = new Random();
     
@@ -43,8 +43,7 @@ public class Rectangle implements Base {
 	private float scaleY = 1;
 	private float scaleZ = 1;
 
-	public Rectangle() {
-	// TODO Auto-generated constructor stub
+	public Sakura() {
 		posX = r.nextFloat() * -1 - 1.5f;
 		posY = r.nextFloat()      + 1.5f;
 		

@@ -6,7 +6,7 @@ import java.util.List;
 import javax.microedition.khronos.opengles.GL10;
 
 import com.raindropaqua.sakurawallpaper.casts.Base;
-import com.raindropaqua.sakurawallpaper.casts.Rectangle;
+import com.raindropaqua.sakurawallpaper.casts.Sakura;
 
 public class Stage {
 
@@ -14,7 +14,7 @@ public class Stage {
 
 	public Stage() {
 		for (int i = 0; i < 100; i++) {
-			bases.add(new Rectangle());
+			bases.add(new Sakura());
 		}
 	}
 
